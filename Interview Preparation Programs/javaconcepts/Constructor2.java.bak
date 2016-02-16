@@ -1,0 +1,30 @@
+
+class Constructor2 
+{
+  Constructor2()
+	{
+      	System.out.println(" Base Class ");
+     }
+}
+
+public class Constructor1 extends Constructor2 
+{
+  
+  Constructor1()
+	{
+      	System.out.println(" Child Class ");
+     }
+
+
+ Constructor1(String s)
+	{
+      	System.out.println(s);
+     }
+
+
+	public static void main(String[] args) 
+	{
+		Constructor1 c1 = new Constructor1();
+        // Constructor1 c2 = new Constructor1("Hello from Argumented Contructor");
+	}
+}

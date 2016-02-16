@@ -1,0 +1,32 @@
+
+class Constructor2 
+{
+    Constructor2(String s)
+	{
+      	System.out.println(" Base : "+s);
+     }
+	 
+	  
+}
+
+public class Constructor5 extends Constructor2 
+{
+  
+ /*  Constructor5()
+	{
+      	System.out.println(" Child Class ");
+     }
+ */
+
+ Constructor5(String s)
+	{
+      	System.out.println(s);
+     }
+
+
+	public static void main(String[] args) 
+	{
+		Constructor5 c = new Constructor5("Hello from Clild Arg Constructor");
+      
+	}
+}

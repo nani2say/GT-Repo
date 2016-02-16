@@ -1,0 +1,48 @@
+-------------------------------
+Problem to solve 
+-------------------------------
+
+     (root)        - level 0
+     / | \      
+    a  b  c        - level 1
+    |    /|\ \
+    d   e f g h    - level 2 … etc.
+           /|\
+          i j k
+
+Given a tree (see concrete example above) please create a program to list all the nodes at a given level “n”.
+
+
+public class Node 
+{
+    public String name; 
+    public List<Node> children; 
+    
+     List<Node> get_elments( Node root, int level)
+       {
+         List<Node> temp=new List<Node>();
+         int i=0;
+         
+         if (level == 0)
+         {
+             for(Node node : root.children) 
+             {
+                temp.add(node);
+             }
+             
+             return temp; 
+         }
+         else 
+         {
+             for(Node node: root.children) 
+             {    
+                 for(Node child: get_elements(node,level-1))
+                 {
+                     temp.add(child);
+                 }
+              }
+          }
+          return temp; 
+       }
+     
+}
