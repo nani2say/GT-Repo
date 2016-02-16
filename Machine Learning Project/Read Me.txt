@@ -1,0 +1,63 @@
+
+Steps to Run the 1st Program(Missing values)
+============================================
+
+Source File : MachineLMSQ1/src/QtnV2.java
+
+Step 1: Change the below values in the initial Set of lines. 
+
+        int NUM_OF_COLUMNS =14;  //this is for the first data set
+	int NUM_OF_ROWS = 242;   
+
+Step 2: Change the input file name in the read() method.
+
+        XSSFWorkbook workbook = new XSSFWorkbook(new FileInputStream( new File("Q1S1.xlsx"))); //This is the first dataset
+
+Step 3: Run the program and we get the output in the console.
+
+Step 4: we need to paste the output onto an excel file.
+
+
+
+Steps to Run the 2nd Program(Classification)
+============================================
+
+Source files: DimensionReduction\src\ClassifierKNN.java & Reduction.java
+
+Step1: Generate a set of Serialized files from the Reduction.java
+
+       1.1 Edit the below fields
+
+        int NUM_OF_COLUMNS =  4434;  // for second data set
+	int NUM_OF_ROWS = 50;  //This is equal to training+ test, 44+6
+
+       1.2 Edit the file names
+           In readLabel() method
+            XSSFWorkbook(new FileInputStream( new File("L2.xlsx"))); //This is the filename with labels
+        
+           In read() method          
+            new XSSFWorkbook(new FileInputStream( new File("T2.xlsx"))); 
+              // ****** T2.xlsx has the training data + Test Data
+
+Output : We get *.ser files
+
+Step 2:  Perform the classification
+
+       2.1 Change the below fields
+        
+        int NUM_OF_COLUMNS = 4434;  //for dataset 2
+	int NUM_OF_ROWS = 50;  //test+train number of rows
+	int ORG_ROWS =44; //training data rows
+	int NUM_LABELS =4; // number of labels 
+	int START =44; //starting row index of testdata
+	int label[]= {1,2,3,4}; //actual labels
+
+        
+	int dimensions =46; // Set 2 - 46, set 1 -25 => Most appropriate vnumber of Eigen vectors considered
+	int k=7;  // this is defined as root of number of rows (sqrt(50) =7) 
+        
+       2.2 Change the input file
+           XSSFWorkbook(new FileInputStream( new File("L2.xlsx"))); // Labels file for 2nd Set
+
+Step 3: Execute to see the results
+             

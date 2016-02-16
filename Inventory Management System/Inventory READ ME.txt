@@ -1,0 +1,13 @@
+
+Inventory Management System:
+============================
+
+Step 1: import the database present in the database folder
+Step 2: Build path for any jar files missing. All the jar files are in the lib folder. 
+Step 3: In the file LoginScreen.java (under the package src/main folder) change the connection string accordingly
+        DBConnectionFactory dbfactory = new DBConnectionFactory("jdbc:mysql://localhost:3306/supermarket","nani","1234");
+        Here supermarket is the database name , nani is the userid, 1234 is the password.
+Step 4: create an entry in the users table with password MD5 hash. This userid and password values should be the credentials to the access the 
+        database itself.
+Step 5: When you execute the program you sshould be prompted for login screen and the application should take us
+        to the home screen.
