@@ -1,0 +1,18 @@
+
+<h3> Below is a list of available Tests.</h3>
+<table>
+    <tr>
+        <th>Test Id</th>
+        <th>Test Name</th>
+        <th>Paper Name</th>
+        <th>Class Name</th>
+        <th>Available Actions</th>
+    </tr>
+    <tr ng-repeat="tserver in testservers">
+        <td>{{tserver.id}}</td>
+        <td>{{tserver.label}}</td>
+        <td>{{tserver.paper.label}}</td>
+        <td>{{tserver.classobj.label}}</td>
+        <td> <button ng-click="starttest($index)">Start Test</button> </td>
+    </tr>
+</table>
