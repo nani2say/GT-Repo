@@ -1,8 +1,0 @@
-<div ng-controller = "myCtrl">
-    <select ng-model="select_paper"
-          ng-options="paper as paper.name for paper in papers"></select>
-    <select ng-model="selectedItem"
-          ng-options="subsection as subsection.name for subsection in subsections"></select>
-    <input type="file" file-model="myFile"/>
-    <button ng-click="uploadFile()">upload and transform</button>
-</div>
